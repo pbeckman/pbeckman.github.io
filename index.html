@@ -23,20 +23,30 @@
     * {font-family: Monaco, 'Courier New', Courier, monospace;}
 
     h1 {font-size: 150%;}
-    h2 {font-size: 120%;}
+    h2 {
+      display: inline;
+      background: #bdf1ff;
+      padding: 0.1em 0.3em;
+      font-size: 100%;
+    }
     h3 {font-size: 85%;}
     p {font-size: 75%;}
-    .big {font-size: 100%;}
+    .big {font-size: 85%;}
 
     body {
       background: #fcd1b3;
     }
     
     .content {
-      max-width: 500px;
+      max-width: 580px;
       margin: auto;
-      background: rgb(255, 255, 255);
+      background: white;
       padding: 10px;
+
+      border: 3px solid black;
+      box-shadow:
+        10px 10px 0 #ad5ce0;
+        /* 20px 20px 0 #ad5ce0; */
     }
     a {
       color: #ad5ce0;
@@ -55,88 +65,136 @@
       text-transform: uppercase;
       font-weight: bold;
     }
+
+    .paper {
+        margin: 1em 0;
+        padding: 0 0 0 0.5em;
+
+        border-left: 3px solid #ad5ce0;
+
+        transition:
+            transform .18s ease,
+            padding-left .18s ease;
+    }
+    .paper p {
+        margin: 0;
+    }
+    .paper:hover {
+        transform: translateX(6px);
+        padding-left: 0.8em;
+    }
+
+    .headshot {
+      border: 3px solid black;
+    }
+
+    .header {
+      text-align: center;
+    }
     
   </style>
 </head>
 
 <body>
   <div class="content">
-    <h1>PAUL BECKMAN</h1>
-    <img src="oden-headshot.JPG" alt="Headshot" width="60%">
+    <div class="header">
+      <h1>PAUL BECKMAN</h1>
+      <img class="headshot" src="oden-headshot.JPG" alt="Headshot" width="60%">
+    </div>
     <p class="big"> 
       Peter O'Donnell Jr. Postdoctoral Fellow <br>
-      <a href="https://oden.utexas.edu/">Oden Institute</a> <br>
+      Oden Institute <br>
       University of Texas at Austin <br>
-      201 E 24th St, <br>
-      Austin, TX 78712 <br>
+      <!-- 201 E 24th St, <br>
+      Austin, TX 78712 <br> -->
       paul dot beckman at austin dot utexas dot edu <br>
       <a href="files/paul-beckman-CV.pdf">CV</a>  
       <a
       href="https://scholar.google.com/citations?hl=en&user=PdxaSw4AAAAJ&view_op=list_works&sortby=pubdate">Google
       Scholar</a>
       <a href="https://github.com/pbeckman">GitHub</a>
-      <a href="ascii.html" style="color: white">ASCII</a>
+      <!-- <a href="ascii.html" style="color: white">ASCII</a> -->
     </p>
-    <h2>BIO</h2>
+    <h2>ABOUT ME</h2>
     <p>
-      I am currently a Peter O'Donnell Jr. Postdoctoral Fellow at the Oden
-      Institute at UT Austin working with <a
+      I am currently a Peter O'Donnell Jr. Postdoctoral Fellow at the <a
+      href="https://oden.utexas.edu/">Oden Institute</a> at UT Austin working
+      with <a
       href="https://oden.utexas.edu/people/directory/Per-Gunnar-Martinsson/">Gunnar
       Martinsson</a> and <a href="https://web.ma.utexas.edu/users/jkileel/">Joe
       Kileel</a>.
     </p>
     <p>
+      My research focuses on using ideas from classical and modern numerical
+      analysis to develop fast algorithms for problems in statistics and data
+      science. In particular, I'm interested in the development of quadratures,
+      fast transforms, and rank-structured matrix and tensor methods for
+      applications in Gaussian processes, spectral estimation, and mixture
+      models.
+    </p>
+    <p>
       Before joining Oden, I completed my PhD in Mathematics at the Courant
       Institute at New York University advised by <a
       href="https://cims.nyu.edu/~oneil/">Mike O'Neil</a> and supported by the
-      <a href="https://www.krellinst.org/csgf/">DOE CSGF</a>. My <a
-      href="files/thesis.pdf">thesis</a>
-      focused on using tools from classical and modern numerical analysis to
-      develop fast algorithms for statistical modeling of data collected over
-      temporal or spatial domains, or on the surface of a manifold.
-    </p>
-    <p>
-      I received my undergraduate degree in Computational and Applied
-      Mathematics at the University of Chicago, and worked as a math and
-      statistics researcher at Argonne National with <a
+      <a href="https://www.krellinst.org/csgf/">DOE CSGF</a>. I received my
+      undergraduate degree in Computational and Applied Mathematics at the
+      University of Chicago, and worked as a math and statistics researcher at
+      Argonne National with <a
       href="https://www.anl.gov/profile/mihai-anitescu">Mihai Anitescu</a>,
       <a
       href="https://stat.uchicago.edu/people/profile/michael-l-stein/">Michael
       Stein</a>, and <a href="https://stat.wisc.edu/staff/geoga-chris/">Chris
-      Geoga</a>. I've held temporary positions at Lawrence Berkeley National Lab
-      working with <a
+      Geoga</a>. I've also held temporary positions at Lawrence Berkeley
+      National Lab working with <a
       href="https://crd.lbl.gov/divisions/amcr/applied-mathematics-dept/scalable-solvers/members/staff-members/xiaoye-li/">Xiaoye
       Sherry Li</a>, <a
       href="https://crd.lbl.gov/divisions/amcr/applied-mathematics-dept/scalable-solvers/members/staff-members/yang-liu/">Yang
       Liu</a>, and
       <a
       href="https://crd.lbl.gov/divisions/amcr/applied-mathematics-dept/scalable-solvers/members/staff-members/chao-yang/">Chao
-      Yang</a>, and at Lawrence Livermore National Lab with <a
-      href="https://people.llnl.gov/oseikuffuor1">Daniel Osei-Kuffuor</a>.
+      Yang</a>.
     </p>
 
-    <h2>PUBLICATIONS</h2>
+    <h2>PUBLICATIONS AND PREPRINTS</h2>
+    <!-- <div class="paper">
+    <p>
+      David Persson, <u>Paul G. Beckman</u>, Tyler Chen, Diana Halikias,
+      Christopher Musco. <a href="">“A Recursive Butterfly Factorization with
+      Optimality Guarantees.”</a> arXiv preprint arXiv: (2026).
+    </p>
+    </div> -->
+    <div class="paper">
     <p>
       <u>Paul G. Beckman</u>, Samuel F. Potter, Michael O'Neil. <a
-      href="https://arxiv.org/abs/2605.21828">“A Butterfly-Accelerated Manifold Harmonic Transform.”</a> arXiv preprint arXiv:2605.21828 (2026).
+      href="https://arxiv.org/abs/2605.21828">“A Butterfly-Accelerated Manifold
+      Harmonic Transform.”</a> arXiv preprint arXiv:2605.21828 (2026).
     </p>
+    </div>
+    <div class="paper">
     <p>
       <u>Paul G. Beckman</u>, Michael O'Neil. <a
-      href="files/NUFHT-SISC-2026.pdf">“A Nonuniform Fast Hankel
-      Transform.”</a> <em> SIAM Journal on Scientific Computing </em> 48, no. 2 (2026): A784-A803.
+      href="files/NUFHT-SISC-2026.pdf">“A Nonuniform Fast Hankel Transform.”</a>
+      <em> SIAM Journal on Scientific Computing </em> 48, no. 2 (2026):
+      A784-A803.
     </p>
+    </div>
+    <div class="paper">
     <p>
       Christopher J. Geoga, <u>Paul G. Beckman</u>. <a
-      href="https://arxiv.org/abs/2503.00492">“Nonparametric spectral density
-      estimation from irregularly sampled data.”</a> arXiv preprint
+      href="https://arxiv.org/abs/2503.00492">“Fast nonparametric spectral
+      density estimation from irregularly sampled data.”</a> arXiv preprint
       arXiv:2503.00492 (2025).
     </p>
+    </div>
+    <div class="paper">
     <p>
       <u>Paul G. Beckman</u>, Christopher J. Geoga. <a
-      href="files/FAFI-STCO-2024.pdf">“Fast Adaptive Fourier Integration
-      for Spectral Densities of Gaussian Processes.”</a>
+      href="files/FAFI-STCO-2024.pdf">“Fast Adaptive Fourier Integration for
+      Spectral Densities of Gaussian Processes.”</a>
       <em>Statistics and Computing</em> 34, no. 6 (2024): 217.
     </p>
+    </div>
+    <div class="paper">
     <p>
       <u>Paul G. Beckman</u>, Christopher J. Geoga, Michael L. Stein, and Mihai
       Anitescu. <a href="files/nonstationary-STCO-2023.pdf">“Scalable
@@ -144,27 +202,34 @@
       Computing</em>
       33, no. 4 (2023): 84. (2023).
     </p>
+    </div>
+    <div class="paper">
     <p>
       David B. Williams-Young, <u>Paul G. Beckman</u>, and Chao Yang. <a
-      href="files/shift-selection-ACM-TOMS-2020.pdf">“A Shift Selection
-      Strategy for Parallel Shift-Invert Spectrum Slicing in Symmetric
-      Self-Consistent Eigenvalue Computation.”</a> <em>ACM Transactions on
-      Mathematical Software (TOMS)</em> 46, no. 4 (2020): 1-31.
+      href="files/shift-selection-ACM-TOMS-2020.pdf">“A Shift Selection Strategy
+      for Parallel Shift-Invert Spectrum Slicing in Symmetric Self-Consistent
+      Eigenvalue Computation.”</a> <em>ACM Transactions on Mathematical Software
+      (TOMS)</em> 46, no. 4 (2020): 1-31.
     </p>
+    </div>
 
-    <h2>MAKING MATH ACCESSIBLE</h2>
+    <h2>PRISON EDUCATION AND RE-ENTRY PROGRAMS</h2>
     <p>
-      I believe we must work to make mathematics more accessible and supportive
-      at all levels of math education and research. To this end, I teach college
-      math courses to incarcerated students through the <a
+      I currently teach credit-bearing college math courses to incarcerated
+      students in Lockhart, TX through the <a
       href="https://sites.utexas.edu/texasprisoneducation/">Texas Prison
-      Education Initiative</a>. In New York I was an instructor with
+      Education Initiative</a>. 
+    </p>
+    <p>
+      In New York from 2020-2025, I was an instructor with
       <a href="https://www.gosonyc.org/">GOSO</a> and the <a
       href="https://www.peteygreene.org/">Petey Greene Program</a>, which are
       fantastic organizations supporting the educational goals of currently and
-      formerly incarcerated individuals from high school equivalency through
-      college. I'm always happy to chat about these programs, so feel free to
-      reach out!
+      formerly incarcerated individuals in New York from high school equivalency
+      through college. 
+    </p>
+    <p>
+      I'm always happy to chat about these programs, so feel free to reach out!
     </p>
     <img src="cows.png" alt="Laplace-Beltrami eigenfunctions" width="100%">
   </div>
