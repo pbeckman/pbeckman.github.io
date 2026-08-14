@@ -18,52 +18,11 @@
 
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    * {font-family: Monaco, 'Courier New', Courier, monospace;}
-
-    h1 {font-size: 150%;}
-    h2 {
-      display: inline;
-      background: #bdf1ff;
-      padding: 0.1em 0.3em;
-      font-size: 100%;
-    }
-    h3 {font-size: 85%;}
-    p {font-size: 75%;}
-    .big {font-size: 85%;}
-
-    body {
-      background: #fcd1b3;
-    }
-    
     .content {
       max-width: 580px;
-      margin: auto;
-      background: white;
-      padding: 10px;
-
-      border: 3px solid black;
-      box-shadow:
-        10px 10px 0 #ad5ce0;
-        /* 20px 20px 0 #ad5ce0; */
-    }
-    a {
-      color: #ad5ce0;
-      position: relative;
-      text-decoration: none;
-      background-image: linear-gradient(currentColor, currentColor);
-      background-position: 0% 100%;
-      background-repeat: no-repeat;
-      background-size: 0% 3px;
-      transition: background-size .3s;
-    }
-    a:hover, a:focus {
-        background-size: 100% 3px;
-    }
-    a:hover {
-      text-transform: uppercase;
-      font-weight: bold;
     }
 
     .paper {
@@ -87,11 +46,6 @@
     .headshot {
       border: 3px solid black;
     }
-
-    .header {
-      text-align: center;
-    }
-    
   </style>
 </head>
 
@@ -99,7 +53,8 @@
   <div class="content">
     <div class="header">
       <h1>PAUL BECKMAN</h1>
-      <img class="headshot" src="oden-headshot.JPG" alt="Headshot" width="60%">
+      <img class="headshot" src="oden-headshot-lowres.png" alt="Headshot"
+      width="60%">
     </div>
     <p class="big"> 
       Peter O'Donnell Jr. Postdoctoral Fellow <br>
@@ -127,10 +82,9 @@
     <p>
       My research focuses on using ideas from classical and modern numerical
       analysis to develop fast algorithms for problems in statistics and data
-      science. In particular, I'm interested in the development of quadratures,
-      fast transforms, and rank-structured matrix and tensor methods for
-      applications in Gaussian processes, spectral estimation, and mixture
-      models.
+      science. For example, I'm interested in the development of quadratures,
+      fast transforms, and structured matrix and tensor methods for applications
+      in Gaussian processes, spectral estimation, mixture models, etc.
     </p>
     <p>
       Before joining Oden, I completed my PhD in Mathematics at the Courant
@@ -159,8 +113,9 @@
     <div class="paper">
     <p>
       David Persson, <u>Paul G. Beckman</u>, Tyler Chen, Diana Halikias,
-      Christopher Musco. <a href="https://arxiv.org/abs/2607.29361">“A recursive butterfly factorization with
-      optimality guarantees.”</a> arXiv preprint arXiv:2607.29361 (2026).
+      Christopher Musco. <a href="https://arxiv.org/abs/2607.29361">“A recursive
+      butterfly factorization with optimality guarantees.”</a> arXiv preprint
+      arXiv:2607.29361 (2026).
     </p>
     </div>
     <div class="paper">
@@ -213,20 +168,45 @@
     </p>
     </div>
 
-    <h2>PRISON EDUCATION</h2>
+    <h2>TEACHING</h2>
+    <table>
+      <tr>
+        <th>Semester</th>
+        <th>Number</th>
+        <th>Title</th>
+      </tr>
+      <tr>
+        <td>Fall 2026</td>
+        <td>M 427J</td>
+        <td><a href="/courses/2026fall-diff-eq.html">Differential Equations with Linear
+        Algebra</a></td>
+      </tr>
+      <tr>
+        <td>Fall 2026</td>
+        <td>M 305G (TPEI)</td>
+        <td>Preparation for Calculus</td>
+      </tr>
+      <tr>
+        <td>Spring 2026</td>
+        <td>M 408K (TPEI)</td>
+        <td>Differential Calculus</td>
+      </tr>
+    </table>
+
+    <!-- <h2>PRISON EDUCATION</h2> -->
     <p>
       I currently teach credit-bearing college math courses to incarcerated
       students in Lockhart, TX through the <a
       href="https://sites.utexas.edu/texasprisoneducation/">Texas Prison
-      Education Initiative</a>. 
+      Education Initiative</a> (TPEI). 
     </p>
     <p>
       In New York from 2020-2025, I was an instructor with
       <a href="https://www.gosonyc.org/">GOSO</a> and the <a
       href="https://www.peteygreene.org/">Petey Greene Program</a>, which are
       fantastic organizations supporting the educational goals of currently and
-      formerly incarcerated individuals in New York from high school equivalency
-      through college. 
+      formerly incarcerated individuals from high school equivalency through
+      college. 
     </p>
     <p>
       I'm always happy to chat about these programs, so feel free to reach out!
